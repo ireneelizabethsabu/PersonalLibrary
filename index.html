@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Library</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="landing-page" class="text-center container-fluid">
+    <div class="row" id="landing-div">
+      <p id="App-name">MyLib</h1>
+      <p id="tagline">Your Personal Library Space</p>
+    </div>
+  </div>
+  <div id="main-page">
+  <header class="jumbotron row">
+    <div class="card text-center col-sm-3 summary col-12">
+      <div class="card-body">
+        <h4 class="card-title">TOTAL BOOKS</h4>
+        <p class="display-4" id="total-books"></p>
+      </div>
+    </div>
+    <div class="text-center col" id="add-newbook-btn">
+      <div class="add-card ">
+        <button type="button" class="btn btn-light" id="add-book" data-toggle="modal" data-target="#exampleModal">
+          <span id="plus">+</span>
+        </button>
+
+        <div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog"
+          aria-labelledby="ModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-body mb-4 mt-4">
+                <h3 class="modal-title text-center " id="ModalLabel">ADD BOOK</h3>
+                <form class="g-3 needs-validation" novalidate role="form" id="modal-form">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>  
+                  </div>
+                  <div class="input-group mb-4">
+                    <input type="text" class="form-control" id="author" name="author" placeholder="Author" required>
+                  </div>
+                  <div class="input-group mb-4">
+                    <div class="col-6">
+                      <input type="text" class="form-control" id="tot-pages" name="tot-pages" placeholder="Total Pages" required>
+                      
+                    </div>
+                    <div class="col-6">
+                      <input type="text" class="form-control" id="pages-read" name="pages-read" placeholder="Pages Read" required>
+                    </div>
+                  </div>
+                  <input type="submit" class="btn btn-dark modal-add-btn text-center" data-dismiss="modal" aria-label="Close">
+                </form>
+              </div>
+
+              <button type="button" class="close btn btn-dark modal-footer" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card text-center col-sm-3 col-12 summary" id="books-read">
+      <div class="card-body">
+        <h4 class="card-title">BOOKS READ</h4>
+        <p class="display-4" id="books-completed"></p>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <div class="row">
+      <section class="col-12" id="book-display">
+        <div class="library row"></div>
+      </section>
+    </div>
+
+  </main>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
